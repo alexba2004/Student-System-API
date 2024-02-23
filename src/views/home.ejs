@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student System</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+      /* CSS para footer fijo en la parte inferior */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .ui-page {
+        height: 100%;
+        overflow: hidden;
+      }
+      .ui-content {
+        padding-bottom: 50px; /* Ajuste según el tamaño del footer */
+      }
+      .ui-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-role="page" data-theme="b">
+      <div data-role="header">
+        <h1>Student System</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#" data-icon="home">Home</a></li>
+            <li><a href="/students" data-icon="eye" class="ui-btn-active">Students</a></li>
+            <li><a href="/newStudent" data-icon="plus">New Student</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div role="main" class="ui-content">
+        <h2>Welcome to the Student System!</h2>
+        <p>The Student System is an API (Application Programming Interface) built using JavaScript, Node.js, and Express.</p>
+        <p>It provides a RESTful architecture, allowing communication between different systems and applications over HTTP protocol.</p>
+        <p>Here are the key dependencies used:</p>
+        <ul>
+          <li><strong>Node.js:</strong> A JavaScript runtime environment that allows executing JavaScript code on the server side.</li>
+          <li><strong>Express:</strong> A web application framework for Node.js, simplifying the creation of APIs and web applications.</li>
+          <li><strong>Mongoose:</strong> An object modeling library for MongoDB and Node.js, facilitating data modeling, validation, and interaction with the MongoDB database.</li>
+          <li><strong>Chalk:</strong> A library for styling and coloring text output in the Node.js console, commonly used for logging and debugging messages.</li>
+          <li><strong>Morgan:</strong> HTTP request logging middleware for Express, used to log details of HTTP requests for analysis and debugging purposes.</li>
+          <li><strong>EJS:</strong> A simple template engine for JavaScript that runs on the server side, used for generating dynamic HTML content based on application data.</li>
+        </ul>
+        <p>Additionally, the following development dependencies are used:</p>
+        <ul>
+          <li><strong>Dotenv:</strong> A library for loading environment variables from a `.env` file in the Node.js environment, useful for storing sensitive configurations or environment-specific variables.</li>
+          <li><strong>Nodemon:</strong> A tool that monitors changes in application files and automatically restarts the server when changes are detected, speeding up the development and debugging process.</li>
+        </ul>
+        <p>The Student System aims to provide a scalable, flexible, and easy-to-maintain solution for managing student records.</p>
+        <p>Developed by Briones</p>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h4>Developed by Briones</h4>
+      </div>
+    </div>
+  </body>
+</html>

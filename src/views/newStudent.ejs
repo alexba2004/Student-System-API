@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student System</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+      /* CSS para footer fijo en la parte inferior */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .ui-page {
+        height: 100%;
+        overflow: hidden;
+      }
+      .ui-content {
+        padding-bottom: 50px; /* Ajuste según el tamaño del footer */
+      }
+      .ui-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      /* Estilo personalizado para el select */
+      .ui-select-custom {
+        border: 1px solid #ccc; /* Color del borde */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 5px; /* Espaciado interno */
+        width: 100%; /* Ancho completo */
+        margin-bottom: 10px; /* Espaciado inferior */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-role="page" data-theme="b">
+      <div data-role="header">
+        <h1>Student System</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="/home" data-icon="home">Home</a></li>
+            <li><a href="/students" data-icon="eye" class="ui-btn-active">Students</a></li>
+            <li><a href="/newStudent" data-icon="plus">New Student</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div role="main" class="ui-content">
+        <form action="/" method="post">
+          <input type="text" name="controlnumber" placeholder="Control Number" />
+          <input type="text" name="name" placeholder="Name" />
+          <input type="text" name="lastname" placeholder="Lastname" />
+          <input type="date" name="birthday" placeholder="Birthday" />
+          <select name="bloodtype" data-native-menu="false" class="ui-select-custom">
+            <option value="">Blood Type</option>
+            <option value="Tipo A Rh positivo (A+)">Tipo A Rh positivo (A+)</option>
+            <option value="Tipo A Rh negativo (A-)">Tipo A Rh negativo (A-)</option>
+            <option value="Tipo B Rh positivo (B+)">Tipo B Rh positivo (B+)</option>
+            <option value="Tipo B Rh negativo (B-)">Tipo B Rh negativo (B-)</option>
+            <option value="Tipo AB Rh positivo (AB+)">Tipo AB Rh positivo (AB+)</option>
+            <option value="Tipo AB Rh negativo (AB-)">Tipo AB Rh negativo (AB-)</option>
+            <option value="Tipo O Rh positivo (O+)">Tipo O Rh positivo (O+)</option>
+            <option value="Tipo O Rh negativo (O-)">Tipo O Rh negativo (O-)</option>
+          </select>
+          <input type="text" name="carrer" placeholder="Carrer" />
+          <label for="flip-2">Status:</label>
+          <select name="status" id="flip-2" data-role="slider">
+            <option value="0">Inactive</option>
+            <option value="1">Active</option>
+          </select>
+          <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Save</button>
+        </form>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h5>Developed by Briones</h5>
+      </div>
+    </div>
+  </body>
+</html>

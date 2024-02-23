@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student System</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+      /* CSS para footer fijo en la parte inferior */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .ui-page {
+        height: 100%;
+        overflow: hidden;
+      }
+      .ui-content {
+        padding-bottom: 50px; /* Ajuste según el tamaño del footer */
+      }
+      .ui-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-role="page" data-theme="b">
+      <div data-role="header">
+        <h1>Student System</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="/home" data-icon="home">Home</a></li>
+            <li><a href="/students" data-icon="eye" class="ui-btn-active">Students</a></li>
+            <li><a href="/newStudent" data-icon="plus">New Student</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-role="content">
+        <form>
+          <input data-type="search" id="searchForCollapsibleSetChildren" />
+        </form>
+        <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+          <% students.forEach((student) => { %>
+          <div data-role="collapsible" data-filtertext="<%= student.name %>">
+            <h3><%= student.name %></h3>
+            <ul data-role="listview" data-inset="false">
+              <li>Control Number: <%= student.controlnumber %></li>
+              <li>Name: <%= student.name %></li>
+              <li>Last Name: <%= student.lastname %></li>
+              <li>Birthday: <%= student.birthday %></li>
+              <li>Blood Type: <%= student.bloodtype %></li>
+              <li>Carrer: <%= student.carrer %></li>
+              <li>Status: <%= student.status %></li>
+
+              <li><a href="/<%=student.controlnumber%>" class="ui-btn">Edit</a></li>
+              <li><a href="/delete/<%=student.controlnumber%>" class="ui-btn">Delete</a></li>
+            </ul>
+          </div>
+          <%})%>
+        </div>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h5>Developed by Briones</h5>
+      </div>
+    </div>
+  </body>
+</html>
