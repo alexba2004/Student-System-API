@@ -2,9 +2,6 @@ import express from "express";
 import morgan from "morgan";
 import ejs from "ejs";
 import studentsRouter from "./routes/students.routes.js";
-import dotenv from "dotenv";
-dotenv.config();
-const app = express();
 
 //Settings
 app.set("view engine", "ejs");
