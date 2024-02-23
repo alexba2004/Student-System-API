@@ -3,6 +3,8 @@ import morgan from "morgan";
 import ejs from "ejs";
 import studentsRouter from "./routes/students.routes.js";
 
+const app = express();
+
 //Settings
 app.set("view engine", "ejs");
 
