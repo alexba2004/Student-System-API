@@ -34,10 +34,10 @@
     <div data-role="page" data-theme="b">
       <div data-role="header">
         <h1>Student System</h1>
-        <div data-role="navbar">
+        <div data-role="navbar" data-iconpos="left">
           <ul>
             <li><a href="/" data-icon="home">Home</a></li>
-            <li><a href="/students" data-icon="eye" class="ui-btn-active">Students</a></li>
+            <li><a href="/students" data-icon="eye">Students</a></li>
             <li><a href="/newStudent" data-icon="plus">New Student</a></li>
           </ul>
         </div>
@@ -52,6 +52,7 @@
           <div data-role="collapsible" data-filtertext="<%= student.name %>">
             <h3><%= student.name %></h3>
             <ul data-role="listview" data-inset="false">
+              <img src="https://imgs.search.brave.com/WNC7hoAQ10jgmUls30v3quQpRDJRspByG-jnW1V1R6s/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wbmcu/cG5ndHJlZS5jb20v/cG5nLWNsaXBhcnQv/MjAxOTExMjUvb3Vy/bWlkL3BuZ3RyZWUt/bWFsZS1zdHVkZW50/LWljb24taW4tbmVv/bi1zdHlsZS1wbmct/aW1hZ2VfMjAyODU5/OS5qcGc" />
               <li>Control Number: <%= student.controlnumber %></li>
               <li>Name: <%= student.name %></li>
               <li>Last Name: <%= student.lastname %></li>

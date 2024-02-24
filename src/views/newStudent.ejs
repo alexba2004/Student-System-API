@@ -30,11 +30,12 @@
 
       /* Estilo personalizado para el select */
       .ui-select-custom {
-        border: 1px solid #ccc; /* Color del borde */
         border-radius: 5px; /* Bordes redondeados */
         padding: 5px; /* Espaciado interno */
         width: 100%; /* Ancho completo */
         margin-bottom: 10px; /* Espaciado inferior */
+        height: 10px;
+        font-size: 13px;
       }
     </style>
   </head>
@@ -43,10 +44,10 @@
     <div data-role="page" data-theme="b">
       <div data-role="header">
         <h1>Student System</h1>
-        <div data-role="navbar">
+        <div data-role="navbar" data-iconpos="left">
           <ul>
             <li><a href="/" data-icon="home">Home</a></li>
-            <li><a href="/students" data-icon="eye" class="ui-btn-active">Students</a></li>
+            <li><a href="/students" data-icon="eye">Students</a></li>
             <li><a href="/newStudent" data-icon="plus">New Student</a></li>
           </ul>
         </div>

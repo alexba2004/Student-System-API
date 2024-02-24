@@ -18,14 +18,28 @@
       .ui-page {
         height: 100%;
         overflow: hidden;
+        background-color: #ff9191; /* Azul claro */
+        color: #000000; /* Blanco */
       }
       .ui-content {
-        padding-bottom: 50px; /* Ajuste según el tamaño del footer */
+        padding-bottom: 100px; /* Ajuste según el tamaño del footer */
       }
       .ui-footer {
         position: fixed;
         bottom: 0;
         width: 100%;
+        background-color: #007bff; /* Azul */
+        color: #ffffff; /* Blanco */
+      }
+      .ui-footer h4 {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+      }
+      .ui-content img {
+        display: block;
+        margin: 0 auto;
+        height: 200px;
       }
     </style>
   </head>
@@ -34,10 +48,10 @@
     <div data-role="page" data-theme="b">
       <div data-role="header">
         <h1>Student System</h1>
-        <div data-role="navbar">
+        <div data-role="navbar" data-iconpos="left" data-theme="c">
           <ul>
             <li><a href="/" data-icon="home">Home</a></li>
-            <li><a href="/students" data-icon="eye" class="ui-btn-active">Students</a></li>
+            <li><a href="/students" data-icon="eye">Students</a></li>
             <li><a href="/newStudent" data-icon="plus">New Student</a></li>
           </ul>
         </div>
@@ -62,6 +76,7 @@
           <li><strong>Nodemon:</strong> A tool that monitors changes in application files and automatically restarts the server when changes are detected, speeding up the development and debugging process.</li>
         </ul>
         <p>The Student System aims to provide a scalable, flexible, and easy-to-maintain solution for managing student records.</p>
+        <img src="https://imgs.search.brave.com/EqzFe84HHTLbJs2OKNw_asnkRfL0m7jj9Y3l0AJ0vBo/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wcm9m/ZXNzaW9uYWxwcm9n/cmFtcy5taXQuZWR1/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9pY28t/aG9tZS10ZWNub2xv/Z2ljby5zdmc.svg" />
       </div>
 
       <div data-role="footer" data-position="fixed">
